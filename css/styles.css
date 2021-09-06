@@ -1,0 +1,670 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*end of reset*/
+*{
+    box-sizing: border-box;
+}
+body {
+    line-height: 1;
+    font-size: 1em;
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+h2, h3{
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+}
+
+span{
+    font-weight: bold;
+}
+
+#top-header{
+    background-color: rgb(229, 226, 226);
+    font-size: 1rem;
+}
+
+#top-header .wrapper{ 
+    justify-content: space-between;
+    flex-flow: row wrap; 
+}
+
+.top-header-left p>a{
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.top-header-right{
+    display: flex;
+    flex-flow: row-reverse;
+    padding: 0.5rem;
+}
+
+.top-header-right p{
+    padding: 0.5rem;
+}
+
+#bottom-header{
+    background: whitesmoke;
+}
+
+#bottom-header .wrapper{
+    padding: 0.5rem;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#bottom-header .logo{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.logo p{
+    font-size: 1.5rem;
+}
+
+.logo p:last-child{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#bottom-header .icon-bg{
+    margin-left: 9px;
+}
+
+#bottom-header .icon-bg>i{
+    color: white;
+    transform: scaleX(-1);
+    font-size: 15px;
+    background: orangered;
+    border-radius: 125px;
+    padding: 7px;
+}
+
+#bottom-header ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#bottom-header nav>ul>li>a{
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 13px;
+    color: black;    
+}
+
+#bottom-header nav>ul>li>a:hover{
+    font-weight: bold;
+}
+
+/*hover*/
+.hvr{
+    position: relative;
+}
+
+.hvr::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #00EDD4;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease-in-out;
+    transition-timing-function: ease-out;
+    transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+
+.hvr:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+/*over*/
+
+#main-hero{
+    background-image: url(../img/minicar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hero-img>img{
+    width: 100%;
+}
+
+.inner-hero-banner{
+    width: 26%;
+    background: rgba(255, 255, 255, 0.6);
+    margin-left: 10rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom: 15%;
+}
+
+.inner-hero-banner h2{
+    text-align: center;
+    padding-top: 7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: firebrick;
+}
+
+.inner-hero-banner p:first-of-type{
+    padding: 1rem;
+}
+
+.inner-hero-banner p:last-child{
+    align-self: flex-end;
+    margin-right: 30px;
+}
+
+.inner-hero-banner input:last-child{
+    padding: 0.5rem 1rem;
+    background: red;
+    color: white;
+    border: none;
+}
+
+
+#upper-banner{
+    background: #00EDD4;   
+}
+
+#upper-banner .wrapper{
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+#upper-banner .upper-text{
+    color: white;
+}
+
+.upper-text p{
+    font-style: italic;
+}
+
+.upper-banner-button input{
+    padding: 0.5rem;
+    background: firebrick;
+    color: white;
+    border: none;
+    height: 45px;
+    width: 100px;
+}
+
+#upper-middle-banner{
+    padding: 2rem;
+}
+
+#upper-middle-banner>.wrapper{
+    flex-flow: column wrap;
+} 
+
+#upper-middle-banner h2{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.upper-middle-text{
+    padding: 1rem;
+    text-align: center;
+    background: #E0FAFB;
+    color: #3290B1;
+}
+
+.upper-middle-info{
+    padding: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.upper-middle-info li{
+    padding: 1rem; 
+}
+
+.upper-middle-info h3{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.upper-middle-info p{
+    padding: 1rem;
+    font-size: 15px;
+}
+
+.icon-box{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.upper-middle-info i{
+    color: white;
+    transform: scaleX(-1);
+    font-size: 30px;
+    background: rgb(0, 255, 213);
+    border-radius: 125px;
+    padding: 27px;
+}
+
+.upper-middle-info .fa-rocket{
+    background: #02B5FB;
+}
+
+.upper-middle-info .fa-credit-card{
+    background: #00EDD4;
+}
+
+.upper-middle-info .fa-smile{
+    background: #FFA75A;
+}
+
+.upper-middle-info .fa-smile{
+    background: #FFA75A;
+}
+
+.upper-middle-info .fa-globe-americas{
+    background: #FF798D;
+}
+
+.icon-container{
+    width: 60px;
+    background: blue;
+    height: 60px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+#down-middle-banner{
+    padding: 2rem;
+    background: lightgrey
+}
+
+#down-middle-banner>.wrapper{
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#down-middle-banner img{
+    width: 100%;  
+}
+
+#down-middle-banner figcaption{
+    background: #798D91;
+    color: white;
+    text-align: center;
+    padding: 3px;
+}
+
+#down-middle-banner h2{
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.img-section{
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 1rem;
+}
+
+.img-section div{
+    padding: 0.2rem;
+    width: 25%;
+}
+
+.img-section a{
+    color: black;
+}
+
+.img-section a:hover{
+    color:white;
+}
+
+#down-banner .wrapper{
+    padding: 2rem;
+    flex-flow: row wrap;
+    align-items: flex-start;  
+}
+
+#down-banner h2{
+    padding-bottom: 1rem;
+}
+
+#down-banner .form-section{
+    width: 50%;
+    padding-right: 20px;
+}
+
+.form-section form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-section li{
+    padding: 4px;
+}
+
+.form-section input{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.form-section p{
+    padding-top: 0.5rem;
+    align-self: flex-end;
+    margin-right: 48px;
+}
+
+.form-section p>input{
+    padding: 10px 20px;
+    background: firebrick;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.form-section textarea{
+    width: 100%;
+}
+
+#down-banner .comment-section{
+    width: 50%;
+}
+
+.comment-box{
+    background: lightgray;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.comment-box p{
+    padding: 10px;
+}
+
+.comment-section .avatar-section{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px;
+}
+
+.avatar-section div:nth-child(2){
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+footer{
+    background: black;
+    color: white;
+    border-top: silver 14px solid;
+}
+
+footer a{
+    color: gray;
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer .wrapper{
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.upper-footer-section{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; 
+}
+
+.contact-banner h2, .brand-selection-banner h2{
+    padding-bottom: 1rem;  
+}
+
+.contact-banner ul>li>ul{
+    padding: 1rem;
+}
+
+.contact-banner ul>li>ul>li{
+    padding: 4px;
+}
+
+.contact-banner ul>li>ul>li:nth-child(2){
+    text-indent:  22px;
+}
+
+.contact-banner ul>li>ul>li:nth-child(3){
+    text-indent:  22px;
+}
+
+.contact-banner ul>li>ul>li:nth-child(4){
+    text-indent:  22px;
+}
+
+.contact-banner ul>li>ul>li:nth-child(n+5){
+    padding-top: 0.5rem;
+}
+
+.contact-banner ul>li>ul>li>i{
+    padding-right: 10px;
+}
+
+.brand-selection-banner ul{
+    list-style-type: disc;
+}
+
+.brand-selection-banner ul>li{
+    padding: 5px;
+}
+
+.info-banner{
+    width: 50%;
+}
+
+.info-banner ul>li{
+    display: inline-flex;
+}
+
+.info-banner h2{
+    padding-bottom: 1rem;
+}
+
+.info-banner .icon-bg-footer>i{
+    color: white;
+    transform: scaleX(-1);
+    font-size: 15px;
+    background: violet;
+    border-radius: 125px;
+    padding: 7px;
+}
+
+.info-banner h2:nth-child(3){
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.info-banner p{
+    line-height: 1.5;
+}
+
+.down-footer-section{
+    width: 100%;
+    border-top: white 2px solid;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:767px){/*(mobile)*/
+    #top-header .wrapper {
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 10px;
+    }
+    .top-header-right {
+        padding: 0;
+    }
+    #bottom-header .wrapper {
+        flex-flow: column nowrap;  
+    }
+    #bottom-header .logo>p:first-child {
+        font-size: 2.5rem;
+    }
+    #bottom-header .icon-bg > i {
+        font-size: 26px;
+    }
+    #bottom-header ul {
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 10px;
+    }
+    #bottom-header ul>li{
+        padding: 10px;
+    }
+    #main-hero {
+        background-position-x: -703px;
+        background-position-y: -192px;
+        background-size: auto;
+        justify-content: center;
+    }
+    .inner-hero-banner {
+        width: 70%;
+        flex-flow: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .inner-hero-banner p:first-of-type {
+        text-align: center;
+    }
+    .inner-hero-banner p:last-child {
+        margin-right: 0;
+        align-self: center;
+    }
+    #upper-banner .wrapper {
+        flex-flow: column wrap;
+    }
+    #upper-banner .upper-text{
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    #upper-middle-banner .upper-middle-info{
+        flex-flow: column wrap;
+    }
+    #down-middle-banner .img-section{
+        flex-flow: column wrap;
+        align-content: center;
+        align-items: center;
+    }
+    .img-section div{
+        width: 100%;
+    }
+    #down-banner .wrapper{
+        flex-flow: column wrap;
+    }
+    #down-banner .form-section, #down-banner .comment-section{
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        align-items: center;
+    }
+    .form-section p{
+        align-self: center;
+        margin-right: 0;
+    }
+    .form-section p>input{
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+    .form-section form>ul{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center
+    }
+    .form-section form>ul>li{
+        width: 100%;
+    }
+    #down-banner .comment-section{
+        padding-top: 50px;
+    }
+    footer .upper-footer-section{
+        flex-flow: column wrap;
+        align-items: center;
+        text-align: center;
+    }
+    .brand-selection-banner>ul{
+        list-style-type: none;
+    }
+    .down-footer-section{
+        flex-flow: column;
+        align-items: center;
+    }
+    .info-banner ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .info-banner ul>li{
+        padding: 4px;
+    }
+}
